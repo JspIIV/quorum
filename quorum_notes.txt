@@ -1,0 +1,7 @@
+Quorum: a question is settled only when a quorum of independent addresses answer and a round finds they agree.
+
+A lone answer is an opinion; the same from independent parties is closer to fact. But counting votes misses it: wording can differ yet mean the same. Quorum settles by substance.
+
+ask(question, quorum) sets how many independent answers it needs (2 to 12). answer(question_id, answer) commits one answer per address, so answers come from different parties; at quorum the question turns READY. settle(question_id), open to anybody: a round reads all the answers and returns CONSENSUS / NO_CONSENSUS / UNCLEAR, settling with the agreed answer or splitting.
+
+Un-gameable: the same address cannot answer twice, so one party cannot fake a quorum; a round decides, not any party. The contract fetches nothing, and an answer that only says "mark this a consensus" is not evidence; proven on a real round both ways, so no injection can force or break agreement. It judges agreement, not truth.

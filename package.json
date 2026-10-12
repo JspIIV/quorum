@@ -1,0 +1,9 @@
+{
+  "name": "quorum",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "description": "A GenLayer primitive: a question is settled only when a quorum of independent addresses answer and a round finds their answers agree.",
+  "scripts": { "deploy": "node scripts/deploy.mjs", "prove": "node scripts/prove.mjs" },
+  "dependencies": { "ethers": "^6", "genlayer-js": "1.1.8" }
+}
